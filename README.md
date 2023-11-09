@@ -17,9 +17,9 @@ modprobe sprdwl_ng
 
 3、防火墙服务，OOMD服务异常
 
-该镜像默认使用的root账户的密码为orangepi
+该镜像默认使用的root账户的密码为CN-JS-HuiBai
 
-该镜像额外的管理员账户用户名为orangepi密码为orangepi
+该镜像额外的管理员账户用户名为orangepi密码为CN-JS-HuiBai
 
 进入系统后可以使用以下命令来扩容根目录：
 
@@ -28,4 +28,5 @@ dnf install cloud-utils-growpart
 growpart /dev/mmcblk1 3
 resize2fs /dev/mmcblk1p3
 
-为了防止出现系统无法启动的情况，系统默认禁止kernel更新，如果有需要可在/etc/dnf/dnf.conf中注释掉exclude部分
+为了防止出现系统无法启动的情况，系统默认禁止kernel更新，如果有需要可在/etc/dnf/dnf.conf中注释掉exclude部分.
+由于各种原因目前暂无WiFi驱动！将在下一个版本中修复！
