@@ -13,7 +13,7 @@ modprobe sprdwl_ng
 
 1、dnf -y update之后会升级内核，可能会导致无法启动，原因尚且不明，请在执行完该命令之后，手动将默认内核切换为6.6.0内核
 
-2、设置WIFI模块自动加载后，在更新内核版本后，可能会出现无法正确加载WIFI驱动的问题，原因尚且不明
+2、设置WIFI模块自动加载后，在更新内核版本后，可能会出现无法正确加载WIFI驱动的问题，原因尚且不明，但可以配置使用开机自动启动的脚本文件来加载模块，这样会更稳定一些！
 
 3、防火墙服务，OOMD服务异常
 
@@ -27,6 +27,3 @@ modprobe sprdwl_ng
 dnf install cloud-utils-growpart
 growpart /dev/mmcblk1 3
 resize2fs /dev/mmcblk1p3
-
-为了防止出现系统无法启动的情况，系统默认禁止kernel更新，如果有需要可在/etc/dnf/dnf.conf中注释掉exclude部分.
-由于各种原因目前暂无WiFi驱动！将在下一个版本中修复！
