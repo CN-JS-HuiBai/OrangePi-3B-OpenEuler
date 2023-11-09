@@ -27,3 +27,5 @@ modprobe sprdwl_ng
 dnf install cloud-utils-growpart
 growpart /dev/mmcblk1 3
 resize2fs /dev/mmcblk1p3
+
+为了防止出现系统无法启动的情况，系统默认禁止kernel更新，如果有需要可在/etc/dnf/dnf.conf中注释掉exclude部分
